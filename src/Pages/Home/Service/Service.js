@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Service = (props) => {
     const {img,name,description,_id} = props.service
-    console.log(props.service);
     return (
         <div>
             <Col>

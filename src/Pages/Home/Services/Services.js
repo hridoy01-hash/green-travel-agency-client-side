@@ -18,7 +18,7 @@ const Services = () => {
           <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px"}}>Where Do You Want to</span> Travel?</h3>
             <Row xs={1} md={3} className="g-4">
             {
-                services.map(service=><Service service={service} key={services.travelId} ></Service>)
+                services.map((service,index)=><Service service={service} key={services._id} ></Service>)
             }
 
            </Row>

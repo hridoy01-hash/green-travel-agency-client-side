@@ -12,17 +12,17 @@ const Footer = () => {
                     
                 </div>
                 <div className="col-md-2 text-white ms-5">
-                  <h5>TOUR <i class="fas fa-car-side"></i></h5>
+                  <h5>TOUR <i className="fas fa-car-side"></i></h5>
                   
-                    <p><i class="fas fa-fighter-jet"></i> Thailand</p>
-                    <p><i class="fas fa-fighter-jet"></i> Vietnam</p>
-                    <p><i class="fas fa-fighter-jet"></i> Camobia</p>
-                    <p><i class="fas fa-fighter-jet"></i> Korea</p>
-                    <p><i class="fas fa-fighter-jet"></i> Swizerland</p>
+                    <p><i className="fas fa-fighter-jet"></i> Thailand</p>
+                    <p><i className="fas fa-fighter-jet"></i> Vietnam</p>
+                    <p><i className="fas fa-fighter-jet"></i> Camobia</p>
+                    <p><i className="fas fa-fighter-jet"></i> Korea</p>
+                    <p><i className="fas fa-fighter-jet"></i> Swizerland</p>
                  
                 </div>
                 <div className="col-md-2 text-white ms-5">
-                <h5>SUPPORT <i class="fas fa-envelope"></i></h5>
+                <h5>SUPPORT <i className="fas fa-envelope"></i></h5>
                   
                   <p><i className="fas fa-arrow-right"></i> Account</p>
                   <p><i className="fas fa-arrow-right"></i> Legal</p>
@@ -32,12 +32,12 @@ const Footer = () => {
 
                 </div>
                 <div className="col-md-2 text-white ms-5">
-                <h5>USEFUL PAGES <i class="fas fa-mouse-pointer"></i></h5>
+                <h5>USEFUL PAGES <i className="fas fa-mouse-pointer"></i></h5>
                   
-                  <p><i class="fas fa-street-view"></i> Contact No.+123 456 7890</p>
-                  <p><i class="fas fa-street-view"></i> Our Experts Doctors</p>
-                  <p><i class="fas fa-street-view"></i> Email ID:info@example.com</p>
-                  <p><i class="fas fa-street-view"></i>Dhanmondi,Dhaka-1216</p>
+                  <p><i className="fas fa-street-view"></i> Contact No.+123 456 7890</p>
+                  <p><i className="fas fa-street-view"></i> Our Experts Doctors</p>
+                  <p><i className="fas fa-street-view"></i> Email ID:info@example.com</p>
+                  <p><i className="fas fa-street-view"></i>Dhanmondi,Dhaka-1216</p>
                   Follow Us <i className="fab fa-twitter"></i> <i className="fab fa-google-plus-g"></i> <i className="fab fa-facebook-square"></i>
                 </div>
             </div>
