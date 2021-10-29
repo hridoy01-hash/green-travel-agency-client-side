@@ -6,8 +6,12 @@ import About from './Pages/About/About';
 import AddService from './Pages/AddService/AddService';
 import Booking from './Pages/Booking/Booking';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
 import ManageBooking from './Pages/ManageBooking/ManageBooking';
 import MyBooking from './Pages/MyBooking/MyBooking';
+import NotFound from './Pages/NotFound/NotFound';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
@@ -21,12 +25,12 @@ function App() {
          <Route exact path="/">
               <Home></Home>
          </Route>
-         <Route path="/home">
+         <Route exact path="/home">
               <Home></Home>
          </Route>
-         <Route exact path="/booking/:id">
+         <PrivateRoute exact path="/booking/:id">
               <Booking></Booking>
-         </Route>
+         </PrivateRoute>
          <Route path="/managebooking">
            <ManageBooking></ManageBooking>
          </Route>
@@ -38,6 +42,16 @@ function App() {
          </Route>
          <Route path="/about">
            <About></About>
+         </Route>
+         <Route path="/login">
+           <Login></Login>
+         </Route>
+         <Route path="/register">
+           <Register></Register>
+         </Route>
+         
+         <Route path="*">
+           <NotFound></NotFound>
          </Route>
 
        </Switch>

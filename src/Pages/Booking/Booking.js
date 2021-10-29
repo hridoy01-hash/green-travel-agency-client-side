@@ -13,9 +13,13 @@ const Booking = () => {
         .then(result=>setBooked(result))
     },[])
     return (
-        <div>
+        <div className="mt-5 mb-5 booking">
             <Container className="text-center">
-         <Card style={{ width: '18rem' }}>
+
+                <div className="row">
+                
+                    <div className="col-md-5">
+                    <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" style={{height:'180px'}} src={booked.img} />
   <Card.Body>
     <Card.Title>Make Your Happiness <span className="text-danger fw-bold">{booked.name}</span></Card.Title>
@@ -25,7 +29,13 @@ const Booking = () => {
     <Button variant="primary">Confirm Order</Button>
   </Card.Body>
 </Card>
-</Container>
+                    </div>
+                    <div className="col-md-6">
+                         
+                    </div>
+                </div>
+        
+            </Container>
         </div>
     );
 };
