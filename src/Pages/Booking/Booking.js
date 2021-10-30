@@ -21,15 +21,20 @@ const Booking = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const order = booked
+        
+        const {name,email,number,address} = data;
+        const newOrder = {name,email,number,address,booked}
+        newOrder.status = 'pendening'
+
+        /* const order = booked
         order.email = user.email;
-        order.userinfo = data; 
+        order.userinfo = data;  */
         fetch('http://localhost:5000/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
             },
-            body:JSON.stringify(order)
+            body:JSON.stringify(newOrder)
         })
         .then()  
         

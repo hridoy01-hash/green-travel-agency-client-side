@@ -3,6 +3,7 @@ import OrderTable from '../OrderTable/OrderTable';
 
 const ManageBooking = () => {
     const [orders,setOrder] = useState([]);
+    
     useEffect(()=>{
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())

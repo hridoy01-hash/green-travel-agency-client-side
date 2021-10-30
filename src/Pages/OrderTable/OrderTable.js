@@ -3,8 +3,7 @@ import { Container } from 'react-bootstrap';
 
 const OrderTable = (props) => {
 
-    const {email,name,_id,img} =  props.order
-
+    const {email,_id,status} =  props.order
     return (
         <Container>
         <div>
@@ -21,8 +20,9 @@ const OrderTable = (props) => {
     <tr>
       <th scope="row">{_id}</th>
       <td>{email}</td>
-      <td>{name}</td>
-      <td></td>
+      <td>{props.order?.booked?.name}</td>
+      {/* <td>{props.order?.booked?.img}</td> */}
+      <td><button className="btn btn-warning">{status}</button> <button className="btn btn-danger">DELETE</button></td>
     </tr>
     <tr>
       
