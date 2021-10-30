@@ -19,11 +19,8 @@ const useFirebase=()=>{
     //handleGoogleSignIn
     const handleGoogleSignIn =()=>{
        setIsLoading(true);
-        signInWithPopup(auth,googleProvider)
-        .then(result =>{
-        const user = result.user;
-        setUser(user);
-        })
+      return signInWithPopup(auth,googleProvider)
+        
         .catch((error) => {
           const errorMessage = error.message;
         setError(errorMessage);
@@ -79,11 +76,8 @@ const useFirebase=()=>{
 
    const handleLogin=()=>{
     setIsLoading(true);
-    signInWithEmailAndPassword(auth, email, password)
-    .then((result) => {
-      const user = result.user
-      setUser(user)
-    })
+   return signInWithEmailAndPassword(auth, email, password)
+   
     .catch((error) => {
       const errorMessage = error.message;
     setError(errorMessage);

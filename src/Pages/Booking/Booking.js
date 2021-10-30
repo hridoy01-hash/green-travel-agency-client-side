@@ -40,7 +40,8 @@ const Booking = () => {
         .then(result =>{
 
             if(result.insertedId){
-                alert("Order Placed Successfully");  
+                alert("Order Placed Successfully"); 
+                reset(); 
             }
             
         })  
@@ -50,11 +51,11 @@ const Booking = () => {
 
     return (
         <div className="mt-5 mb-5 booking">
-            <Container className="text-center">
+            <Container>
 
                 <div className="row">
                 
-                    <div className="col-md-6">
+                    <div className="col-md-6 text-center">
                     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" style={{height:'180px'}} src={booked.img} />
   <Card.Body>
@@ -66,13 +67,15 @@ const Booking = () => {
   </Card.Body>
 </Card>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 text-center">
+                    <p className="text-center text-muted ">GET FASTED DELIVARY? <hr /></p>
+    <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px"}}>Provide Your Information</span> </h3>
     <form  onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("Name")} defaultValue={user.displayName}/>
+      <input {...register("name")} defaultValue={user.displayName}/>
       <input {...register("email")} defaultValue={user.email} />
-      <input type="number" {...register("phoneNumber")} placeholder="Enter Phone Number" />
-      <input {...register("address")} placeholder="Enter Address"/>
-      <input  className="btn btn-success" type="submit" />
+      <input type="number" {...register("number",{ required: true })} required placeholder="Enter Phone Number" />
+      <input {...register("address",{ required: true })} required placeholder="Enter Address"/>
+      <input  className="btn btn-success" type="submit" value="Confirm Booked" />
     </form>
 
                          
