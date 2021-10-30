@@ -27,9 +27,9 @@ const AddService = () => {
            <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px"}}>Add A New </span> COUNTRY</h3>
 
            <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name")} />
-      <input {...register("description")} />
-      <input {...register("img")} />
+      <input {...register("name")} placeholder="Enter Destintion/Country" />
+      <input {...register("description")} placeholder="Enter a Short description " />
+      <input {...register("img")} placeholder="Provide Img Url" />
       <input type="submit" />
     </form>
 

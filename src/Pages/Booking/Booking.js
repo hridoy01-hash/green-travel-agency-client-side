@@ -19,7 +19,7 @@ const Booking = () => {
 
     const {user} = useAuth();
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         
         const {name,email,number,address} = data;
@@ -36,7 +36,14 @@ const Booking = () => {
             },
             body:JSON.stringify(newOrder)
         })
-        .then()  
+        .then(res =>res.json())
+        .then(result =>{
+
+            if(result.insertedId){
+                alert("Order Placed Successfully");  
+            }
+            
+        })  
         
     }
     

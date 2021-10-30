@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 import Service from '../Service/Service';
 
 const Services = () => {
@@ -10,7 +11,11 @@ const Services = () => {
         fetch('http://localhost:5000/booking')
         .then(res=>res.json())
         .then(result =>setServices(result))
-    },[]) 
+    },[]);
+    const {isLoading} = useAuth();
+    if(isLoading){
+        return <Spinner animation="border" variant="danger" />
+      }
     return (
         <div>
          <Container className="mt-5">

@@ -1,38 +1,28 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
-
-const OrderTable = (props) => {
-
+const MyOrderTable = (props) => {
     const {email,_id,status} =  props.order
 
     const handleDelete = id =>{
-
-     const procced = window.confirm('Are You Sure Want To DELETE')
-     if(procced){
-      fetch(`http://localhost:5000/orders/${id}`, {
+   
+         const procced = window.confirm('Are Your Sure Want to DELETE')
+         if(procced){
+               fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json" },
       })
         .then((res) => res.json())
         .then((result) => {
-  
-          if(result.deletedCount >0){
-            alert('Delete has been successfully');
-        }
-    })
-     }
-       
-  }
 
-  
-  
-
-  const handleUpdate=id=>{
-    axios.put(`http://localhost:5000/orders`,{id})
-    .then(res => console.log("Your order Approved"));
-  }
-
+            if(result.deletedCount >0){
+                alert('Delete has been successfully');
+                
+            }
+         
+        });
+         }
+      
+    }
 
     return (
         <Container>
@@ -49,11 +39,9 @@ const OrderTable = (props) => {
   <tbody>
     <tr>
       <th scope="row">{_id}</th>
-      
       <td>{email}</td>
       <td>{props.order?.booked?.name}</td>
-      {/* <td>{props.order?.booked?.img}</td> */}
-      <td><button className="btn btn-warning" onClick={()=>handleUpdate(_id)}>{status}</button> <button className="btn btn-danger" onClick={()=>handleDelete(_id)}>DELETE</button></td>
+      <td> <button className="btn btn-warning">{status}</button> <button className="btn btn-danger" onClick={()=>handleDelete(_id)}>DELETE</button></td>
     </tr>
     <tr>
       
@@ -70,4 +58,4 @@ const OrderTable = (props) => {
     );
 };
 
-export default OrderTable;
+export default MyOrderTable;
