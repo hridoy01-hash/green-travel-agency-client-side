@@ -18,7 +18,7 @@ const MyOrderTable = (props) => {
       })
       .then((willDelete) => {
         if (willDelete) {
-          fetch(`http://localhost:5000/orders/${id}`, {
+          fetch(`https://stark-plateau-94648.herokuapp.com/orders/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json" },
       })
@@ -31,31 +31,11 @@ const MyOrderTable = (props) => {
         }
       });
          
-      
-      
-     /*  const procced = window.confirm('Are Your Sure Want to DELETE')
-         if(procced){
-               fetch(`http://localhost:5000/orders/${id}`, {
-        method: "DELETE",
-        headers: { "Content-type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((result) => {
-
-            if(result.deletedCount >0){
-                alert('Delete has been successfully');
-                
-            }
-         
-        });
-         }
-      
-    } */
   }
    
     return (
         <Container>
-        <div>
+        <div style={{overflow:'scroll'}}>
         <table class="table table-border">
   <thead>
     <tr>

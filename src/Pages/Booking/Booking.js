@@ -12,7 +12,7 @@ const Booking = () => {
     const {id} = useParams();
     const [booked,setBooked]= useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch(`https://stark-plateau-94648.herokuapp.com/booking/${id}`)
         .then(res=>res.json())
         .then(result=>setBooked(result))
     },[]);
@@ -30,7 +30,7 @@ const Booking = () => {
         /* const order = booked
         order.email = user.email;
         order.userinfo = data;  */
-        fetch('http://localhost:5000/orders',{
+        fetch('https://stark-plateau-94648.herokuapp.com/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

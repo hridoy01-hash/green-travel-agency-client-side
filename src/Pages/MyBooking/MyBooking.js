@@ -8,7 +8,7 @@ const MyBooking = () => {
     const {user} = useAuth();
     const email = user.email
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders/${email}`)
+        fetch(`https://stark-plateau-94648.herokuapp.com/orders/${email}`)
         .then(res => res.json())
         .then(result => setOrder(result))
         

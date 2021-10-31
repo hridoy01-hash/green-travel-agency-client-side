@@ -6,7 +6,7 @@ const ManageBooking = () => {
     const [orders,setOrder] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://stark-plateau-94648.herokuapp.com/orders')
         .then(res=>res.json())
         .then(result => setOrder(result))
     },[orders]);

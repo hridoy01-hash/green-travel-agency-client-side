@@ -10,7 +10,7 @@ const AboutTour = () => {
            
            <Container>
            <p className="text-center text-success mt-5 ">Lastest News<hr /></p>
-           <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px"}}>Learn More About</span> Tours</h3>
+           <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px",fontFamily:'cursive'}}>Learn More About</span> Tours</h3>
 
            <div>
            <div className="row row-cols-1 row-cols-md-3 g-4">
@@ -20,7 +20,7 @@ const AboutTour = () => {
       
       <div className="card-body text-center">
         <h5 className="card-title"><span className="text-warning">THAILAN</span> | May 11, 2020</h5>
-        <p className="card-text">Thailand is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot </p>
+        <p className="card-text text-muted">Thailand is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot </p>
         <button className="btn btn-warning">Explore More</button>
       </div>
     </div>
@@ -30,7 +30,7 @@ const AboutTour = () => {
     <div className='img-parent'><img src={learn2} className="cart-img card-img-top" alt="..."/></div>
       <div className="card-body text-center">
       <h5 className="card-title"><span className="text-warning">Swizerland</span> | March 11, 2020</h5>
-        <p className="card-text">Swizerland is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>
+        <p className="card-text text-muted">Swizerland is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>
         <button className="btn btn-warning">Explore More</button>
       </div>
     </div>
@@ -40,7 +40,7 @@ const AboutTour = () => {
     <div className='img-parent'><img src={learn1} className="cart-img card-img-top" alt="..."/></div>
       <div className="card-body text-center">
       <h5 className="card-title"><span className="text-warning">Indoneshiya</span> | March 11, 2020</h5>
-        <p className="card-text">Bali is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>
+        <p className="card-text text-muted">Bali is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>
         <button className="btn btn-warning">Explore More</button>
       </div>
     </div>

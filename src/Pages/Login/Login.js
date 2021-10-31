@@ -48,8 +48,8 @@ const Login = () => {
     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
   </FloatingLabel>
   <p className="mt-2">I have no Account? <Link to="/register"> Register</Link> </p>
-  <Button onClick={handleSignin} className="mt-3" variant="outline-primary">Confirm Login</Button> 
-  <p className="text-center">----Or use one of these options----</p>
+  <Button onClick={handleSignin} className="mt-3" variant="outline-primary">SIGNIN</Button> 
+  <p className="text-center">----Or use this options----</p>
   <div className="d-flex justify-content-center mb-5 ">
   <Button onClick={handleGoogleLogin} className="mt-3 mb-3 me-5 fw-bold" variant="outline-primary"><i className="fab fa-google"></i> Signin With Google</Button>
   

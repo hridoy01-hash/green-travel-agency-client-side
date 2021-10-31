@@ -19,7 +19,7 @@ const Register = () => {
     label="Enter Name"
     className="mb-3 mt-5"
   >
-    <Form.Control onBlur={handleName} type="text" placeholder="Enter Name" />
+    <Form.Control onBlur={handleName} type="text" placeholder="Enter Name" required />
   </FloatingLabel>
 
   <FloatingLabel
@@ -34,8 +34,8 @@ const Register = () => {
     <Form.Control type="password" placeholder="Password" />
   </FloatingLabel>
   <p className="mt-2">Already have an Account? <Link to="/login">Login</Link> </p>
-  <Button onClick={handleSignup} className="mt-3" variant="outline-primary">Confirm Register</Button> 
-  <p className="text-center">----Or use one of these options----</p>
+  <Button onClick={handleSignup} className="mt-3" variant="outline-primary">SIGNUP</Button> 
+  <p className="text-center">----Or use this options----</p>
   <div className="d-flex justify-content-center ">
   <Button onClick={handleGoogleSignIn} className="mt-3 mb-3 me-5" variant="primary"><i className="fab fa-google"></i> SinginUp With Google</Button>
   </div>

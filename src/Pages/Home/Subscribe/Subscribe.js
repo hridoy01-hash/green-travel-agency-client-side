@@ -6,7 +6,7 @@ const Subscribe = () => {
         <div>
             <Container>
             <p className="text-center text-success mt-5 ">Stay With Us?<hr /></p>
-           <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px"}}>Subscribe &</span> Get's More Offer</h3>
+           <h3 className="text-center text-muted mb-5"> <span className="fw-bold text-danger" style={{fontSize:"30px",fontFamily:'cursive'}}>Subscribe & Get's</span>  More Offer</h3>
             </Container>
             <div className="subscribe">
             <div className="iteam text-center ">

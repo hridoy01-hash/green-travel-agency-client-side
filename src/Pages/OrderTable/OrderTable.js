@@ -17,7 +17,7 @@ const OrderTable = (props) => {
       })
       .then((willDelete) => {
         if (willDelete) {
-          fetch(`http://localhost:5000/orders/${id}`, {
+          fetch(`https://stark-plateau-94648.herokuapp.com/orders/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json" },
       })
@@ -48,9 +48,10 @@ const OrderTable = (props) => {
     })
     .then((willDelete) => {
       if (willDelete) {
-        axios.put(`http://localhost:5000/orders`,{id})
+        axios.put(`https://stark-plateau-94648.herokuapp.com/orders`,{id})    
 
-      .then(res => console.log("Your order Approved"));
+      .then(res => console.log("Your order Approved"))
+      
       } else {
         swal("Your imaginary file is safe!");
       }
@@ -62,8 +63,8 @@ const OrderTable = (props) => {
 
     return (
         <Container>
-        <div>
-        <table class="table table-border table-striped">
+        <div style={{overflow:'scroll'}}>
+        <table style={{overflow:'scroll'}} className="table  table-border table-striped">
   <thead>
     <tr>
       <th scope="col">Order Id</th>

@@ -6,7 +6,7 @@ import './AddService.css'
 const AddService = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/booking',{
+        fetch('https://stark-plateau-94648.herokuapp.com/booking',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

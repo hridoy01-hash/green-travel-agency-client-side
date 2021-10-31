@@ -2,9 +2,9 @@
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url('../../../images/julien-de-salaberry-oJtRGajzfqI-unsplash.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../images/julien-de-salaberry-oJtRGajzfqI-unsplash.jpg');
     background-attachment: fixed;
-    height: 70vh;
+    height: 80vh;
 
     /* height: 200px; */
 

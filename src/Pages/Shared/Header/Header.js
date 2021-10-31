@@ -23,7 +23,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
     <NavLink to="/" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} >
        <img style={{height:"55px"}} src={logo} alt="" /> 
-       <span className="text-primary">Green Travel</span>
+       <span className="text-primary"style={{fontFamily:'cursive'}} >Green Travel</span>
     </NavLink> 
     
     {/* NavLink for Route */}
@@ -38,11 +38,12 @@ const Header = () => {
    
     
   { 
-   !user.email? <Link to ="/login"> <Button style={{color:"white"}} variant="outline-primary">Login<i className="fas fa-sign-in-alt"></i></Button></Link>
+   !user.email? <Link to ="/login"> <Button style={{color:"white"}} variant="primary">Login<i className="fas fa-sign-in-alt"></i></Button></Link>
     :
-   <Button onClick={logout} style={{color:"white"}} variant="outline-primary">Logout {user.displayName} <i className="fas fa-user-plus"></i></Button>}
+   <Button onClick={logout} style={{color:"white"}} variant="primary">Logout {user.displayName} <i className="fas fa-user-plus"></i> </Button>}
    
     
+
     </Navbar.Collapse>
     </Container>
   </Navbar>
