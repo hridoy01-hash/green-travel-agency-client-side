@@ -1,11 +1,39 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import swal from 'sweetalert';
+
 const MyOrderTable = (props) => {
     const {email,_id,status} =  props.order
 
     const handleDelete = id =>{
    
-         const procced = window.confirm('Are Your Sure Want to DELETE')
+
+
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          fetch(`http://localhost:5000/orders/${id}`, {
+        method: "DELETE",
+        headers: { "Content-type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+         
+        });
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+         
+      
+      
+     /*  const procced = window.confirm('Are Your Sure Want to DELETE')
          if(procced){
                fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
@@ -22,8 +50,9 @@ const MyOrderTable = (props) => {
         });
          }
       
-    }
-
+    } */
+  }
+   
     return (
         <Container>
         <div>

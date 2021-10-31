@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import swal from 'sweetalert';
 
 const OrderTable = (props) => {
 
@@ -8,36 +8,62 @@ const OrderTable = (props) => {
 
     const handleDelete = id =>{
 
-     const procced = window.confirm('Are You Sure Want To DELETE')
-     if(procced){
-      fetch(`http://localhost:5000/orders/${id}`, {
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
         headers: { "Content-type": "application/json" },
       })
         .then((res) => res.json())
         .then((result) => {
-  
-          if(result.deletedCount >0){
-            alert('Delete has been successfully');
+         
+        });
+        } else {
+          swal("Your imaginary file is safe!");
         }
-    })
-     }
+      });
        
   }
 
   
+
+
   
 
   const handleUpdate=id=>{
-    axios.put(`http://localhost:5000/orders`,{id})
-    .then(res => console.log("Your order Approved"));
+
+    swal({
+      title: "Are you sure?",
+      text: "Once Approved, you will not be able to pendening this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        axios.put(`http://localhost:5000/orders`,{id})
+
+      .then(res => console.log("Your order Approved"));
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
+
+    
   }
 
 
     return (
         <Container>
         <div>
-        <table class="table table-border">
+        <table class="table table-border table-striped">
   <thead>
     <tr>
       <th scope="col">Order Id</th>

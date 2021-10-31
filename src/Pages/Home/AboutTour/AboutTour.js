@@ -16,7 +16,8 @@ const AboutTour = () => {
            <div className="row row-cols-1 row-cols-md-3 g-4">
   <div className="col">
     <div className="card  shadow p-3 mb-5 bg-body rounded">
-      <img src={learn3} className="card-img-top" alt="..."/>
+      <div className='img-parent'><img src={learn3} className="cart-img card-img-top" alt="..."/></div>
+      
       <div className="card-body text-center">
         <h5 className="card-title"><span className="text-warning">THAILAN</span> | May 11, 2020</h5>
         <p className="card-text">Thailand is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot </p>
@@ -26,7 +27,7 @@ const AboutTour = () => {
   </div>
   <div className="col">
     <div className="card shadow p-3 mb-5 bg-body rounded ">
-      <img src={learn2} className="card-img-top" alt="..."/>
+    <div className='img-parent'><img src={learn2} className="cart-img card-img-top" alt="..."/></div>
       <div className="card-body text-center">
       <h5 className="card-title"><span className="text-warning">Swizerland</span> | March 11, 2020</h5>
         <p className="card-text">Swizerland is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>
@@ -36,7 +37,7 @@ const AboutTour = () => {
   </div>
   <div className="col">
     <div className="card shadow p-3 mb-5 bg-body rounded">
-      <img src={learn1} alt="..."/>
+    <div className='img-parent'><img src={learn1} className="cart-img card-img-top" alt="..."/></div>
       <div className="card-body text-center">
       <h5 className="card-title"><span className="text-warning">Indoneshiya</span> | March 11, 2020</h5>
         <p className="card-text">Bali is smack dab in the middle of one of the warmest, most humid climates on the planet. That’s the whole point, right? Warm weather and perfect beaches. But what you don’t see in those glamorized photos tagged with #wanderlust and #paradise, is how hot.</p>

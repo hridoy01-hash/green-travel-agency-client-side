@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="row">
                 <div className="col-md-4 text-white">
                     <h4>About Us</h4>
-                    <p className="text-align-justify">The best and most professional medical website templates for a quick and reliable launch of a physician, doctor, dentist, clinic, hospital and any other are provided here.</p>
+                    <p className="text-align-justify">Since 2014, we’ve helped more than 500,000 people of all ages enjoy the best outdoor experience of their lives. Whether it’s for one day or a two-week vacation, close to home or a foreign land and something like that.</p>
                     
                 </div>
                 <div className="col-md-2 text-white ms-5">

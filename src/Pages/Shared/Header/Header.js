@@ -8,7 +8,7 @@ import useAuth from '../../../hooks/useAuth';
 const Header = () => {
    //NavLink Active Style
    const activeStyle = {
-    fontWeight: "bold",
+    
     color: "red",
     textDecoration:"none",
     fontSize:"20px",
@@ -19,9 +19,9 @@ const Header = () => {
     return (
         <div>
              <Navbar collapseOnSelect expand="sm" bg="dark" variant="light">
-    <Container className="mt-3">
+    <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-    <NavLink to="/" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} >
+    <NavLink to="/" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} >
        <img style={{height:"55px"}} src={logo} alt="" /> 
        <span className="text-primary">Green Travel</span>
     </NavLink> 
@@ -29,12 +29,12 @@ const Header = () => {
     {/* NavLink for Route */}
 
     <Navbar.Collapse id="responsive-navbar-nav" className="me-auto nav-iteam justify-content-end">
-    <NavLink to="/home" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} activeStyle={activeStyle} >Home</NavLink>
-    { user.email && <NavLink to="/mybooking" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} activeStyle={activeStyle} >My Booking</NavLink>}
-    {user.email && <NavLink to="/managebooking" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} activeStyle={activeStyle} >Manage Booking</NavLink>}
-    { user.email && <NavLink to="/addservice" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} activeStyle={activeStyle} >Add Service</NavLink>}
+    <NavLink to="/home" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} activeStyle={activeStyle} >Home</NavLink>
+    { user.email && <NavLink to="/mybooking" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} activeStyle={activeStyle} >My Booking</NavLink>}
+    {user.email && <NavLink to="/managebooking" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} activeStyle={activeStyle} >Manage Booking</NavLink>}
+    { user.email && <NavLink to="/addservice" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} activeStyle={activeStyle} >Add Service</NavLink>}
     
-    <NavLink to="/about" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",fontWeight:"bold",padding:"6px",color:"white"}} activeStyle={activeStyle}>About </NavLink>
+    <NavLink to="/about" style={{textDecoration:"none",fontSize:"20px", marginRight:"10px",padding:"6px",color:"white"}} activeStyle={activeStyle}>About </NavLink>
    
     
   { 

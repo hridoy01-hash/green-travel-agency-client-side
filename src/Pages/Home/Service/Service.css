@@ -1,0 +1,12 @@
+.img-parent{
+    overflow:hidden;
+}
+.cart-img{
+    transform: scale(1);
+    transition: all .8s linear;
+}
+.cart-img:hover{
+
+    transform: scale(1.5);
+
+}

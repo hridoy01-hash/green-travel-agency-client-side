@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import './App.css';
-
 import AuthProvider from './Context/AuthProvider';
 import About from './Pages/About/About';
 import AddService from './Pages/AddService/AddService';
@@ -16,8 +15,8 @@ import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
-function App() {
 
+function App() {
   return (
     <div>
       <AuthProvider>

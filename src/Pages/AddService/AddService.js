@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import swal from 'sweetalert';
 import './AddService.css'
 const AddService = () => {
     const { register, handleSubmit,reset } = useForm();
@@ -15,7 +16,12 @@ const AddService = () => {
         .then(res => res.json())
         .then(result =>{
             if(result.insertedId){
-                alert('New Destination Added Has been Succesfully');
+                swal({
+                    title: "Good job!",
+                    text: "Your Destination Add Successfully!",
+                    icon: "success",
+                    button: "Aww yiss!",
+                  });
                 reset();
             }
         })
@@ -28,9 +34,9 @@ const AddService = () => {
 
           <div className="d-flex justify-content-center  mx-auto mb-5">
           <form  onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name")} placeholder="Enter Destintion/Country" />
-      <input {...register("description")} placeholder="Enter a Short description " />
-      <input {...register("img")} placeholder="Provide Img Url" />
+      <input {...register("name")} placeholder="Enter Destintion/Country" required/>
+      <input {...register("description")} placeholder="Enter a Short description " required />
+      <input {...register("img")} placeholder="Provide Img Url" required/>
       <input className="btn btn-primary" type="submit" value='Add Product' />
     </form>
           </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Spinner } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import AboutTour from '../AboutTour/AboutTour';
+import Advertising from '../Advertising/Advertising';
 import Baner from '../Baner/Baner';
 import LearnMore from '../LearnMore/LearnMore';
 import Services from '../Services/Services';
@@ -17,6 +18,7 @@ const Home = () => {
         <div>
           <Baner></Baner>
           <Services></Services>
+          <Advertising></Advertising>
           <LearnMore></LearnMore>
           <AboutTour></AboutTour>
           <Subscribe></Subscribe>

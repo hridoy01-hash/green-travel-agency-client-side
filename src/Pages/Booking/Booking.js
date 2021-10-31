@@ -6,6 +6,7 @@ import { useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import './Booking.css'
 import useAuth from '../../hooks/useAuth';
+import swal from 'sweetalert';
 
 const Booking = () => {
     const {id} = useParams();
@@ -40,7 +41,12 @@ const Booking = () => {
         .then(result =>{
 
             if(result.insertedId){
-                alert("Order Placed Successfully"); 
+                swal({
+                    title: "Good job!",
+                    text: "Your Booked Successfully!",
+                    icon: "success",
+                    button: "Aww yiss!",
+                  });
                 reset(); 
             }
             
